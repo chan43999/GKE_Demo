@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: my-ingress
+  name: my-jenkins-ingress
 spec:
   backend:
   rules:
@@ -9,5 +9,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: hello-world
-              servicePort: 8080
+              serviceName: jenkins-service-node
+              servicePort: 80
